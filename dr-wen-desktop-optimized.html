@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文宏裕醫師｜神經外科・脊椎退化疾病・微創脊椎手術｜桃園</title>
+<meta name="description" content="文宏裕醫師｜神經外科・脊椎退化疾病・微創脊椎手術。不該開的刀，我不開；該開的刀，我做到最好。脊椎壓迫性骨折骨水泥手術、腰椎椎管狹窄、椎間盤突出、頸椎神經壓迫、腕隧道症候群。桃園脊椎微創推薦。">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap');
+
+  :root{
+    --navy:#153a5b;
+    --navy-dark:#0c2948;
+    --teal:#0b6f73;
+    --teal-dark:#0b6f73;
+    --gold:#c49a2d;
+    --bg:#f5f6f4;
+    --text:#26333d;
+    --muted:#5c6975;
+    --card:#ffffff;
+    --radius:10px;
+    --shadow:0 1px 0 rgba(21,58,91,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.75;}
+  img{max-width:100%;display:block;}
+  a{color:var(--teal-dark);text-decoration:none;}
+  .container{max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  /* Top bar */
+  .topbar{background:var(--navy-dark);color:#cfe0ef;font-size:.82rem;padding:6px 0;}
+  .topbar .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;}
+
+  /* Nav */
+  header{background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:baseline;gap:8px;}
+  .brand b{font-size:1.25rem;color:var(--navy);letter-spacing:.02em;}
+  .brand span{font-size:.72rem;color:var(--muted);letter-spacing:.04em;}
+  nav > ul{display:flex;list-style:none;gap:2px;}
+  nav a{display:block;padding:8px 14px;color:var(--navy);font-size:.95rem;border-radius:8px;transition:.2s;}
+  nav a:hover{background:var(--bg);color:var(--teal-dark);}
+  .nav-cta{background:var(--gold);color:var(--navy-dark) !important;font-weight:700;}
+  .nav-cta:hover{filter:brightness(.96);} 
+  .menu-btn{display:none;background:none;border:none;font-size:1.6rem;color:var(--navy);cursor:pointer;}
+
+  /* ===== 下拉選單 ===== */
+  nav li{position:relative;}
+  nav li.has-sub > a::after{content:" ▾";font-size:.75em;color:var(--teal);}
+  .sub{display:none;position:absolute;top:100%;left:0;min-width:260px;background:var(--navy-dark);border-top:3px solid var(--teal);box-shadow:0 14px 30px rgba(0,0,0,.25);list-style:none;z-index:300;padding:0;border-radius:0 0 10px 10px;overflow:hidden;}
+  .sub li{margin:0;}
+  .sub a{display:block;padding:13px 20px;color:#e8f1f8;font-size:.9rem;border-radius:0;border-bottom:1px solid rgba(255,255,255,.08);}
+  .sub li:last-child a{border-bottom:none;}
+  .sub a:hover{background:rgba(0,168,168,.22);color:#fff;padding-left:24px;}
+  @media (min-width:901px){
+    nav li.has-sub:hover > .sub,
+    nav li.has-sub:focus-within > .sub{display:block;}
+  }
+
+  /* Hero */
+  .hero{background:linear-gradient(120deg,#153a5b 0%,#153a5b 72%,#184766 100%);color:#fff;overflow:hidden;position:relative;}
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center;padding:72px 0 76px;position:relative;z-index:1;}
+  .hero .positioning{font-size:1rem;color:#d8e5ed;letter-spacing:.02em;margin-bottom:20px;}
+  .hero h1{font-family:"Noto Serif TC",serif;font-size:2.75rem;line-height:1.25;letter-spacing:.02em;margin-bottom:18px;font-weight:700;}
+  .hero .slogan{font-family:"Noto Serif TC",serif;font-size:1.1rem;font-weight:600;color:#f1dfad;letter-spacing:.01em;margin:0 0 18px;}
+  .hero p.lead{margin:0 0 30px;color:#dce9f5;font-size:1.03rem;max-width:34em;}
+  .hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:12px 26px;border-radius:8px;font-weight:700;font-size:1rem;transition:transform .2s ease,filter .2s ease,background .2s ease;}
+  .btn-primary{background:var(--gold);color:var(--navy-dark);}
+  .btn-primary:hover{filter:brightness(1.04);transform:translateY(-1px);}
+  .btn-link{color:#fff;border-bottom:1px solid rgba(255,255,255,.45);padding:4px 0;font-weight:500;}
+  .btn-link:hover{border-color:#fff;}
+  .portrait{position:relative;}
+  .portrait .frame{aspect-ratio:2/3;max-height:560px;border-radius:10px;background:#dfe7ec;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.18);}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+  .portrait .caption{position:static;margin-top:10px;padding:0 2px;font-size:.8rem;color:#d4e2ec;}
+
+  /* Sections */
+  section{padding:72px 0;}
+  .sec-head{text-align:center;margin-bottom:44px;}
+  .sec-head .en{color:var(--teal);font-size:.8rem;letter-spacing:.06em;font-weight:700;}
+  .sec-head h2{font-family:"Noto Serif TC",serif;font-size:1.9rem;line-height:1.35;color:var(--navy);letter-spacing:.02em;margin-top:6px;}
+  .sec-head p{color:var(--muted);margin-top:10px;max-width:40em;margin-inline:auto;}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start;}
+  .about-text h3{color:var(--navy);font-size:1.18rem;margin:24px 0 8px;padding-left:12px;border-left:2px solid var(--teal);}
+  .about-text p{margin-bottom:10px;font-size:.98rem;}
+  .about-text blockquote{background:#e5f0ee;border-left:2px solid var(--teal);padding:18px 22px;border-radius:0;color:#1f5c5c;font-size:1.05rem;margin:0 0 18px;font-weight:500;}
+  .cred-card{background:transparent;border-left:1px solid #d9e0e3;border-radius:0;box-shadow:none;padding:4px 0 4px 30px;}
+  .cred-card h3{color:var(--navy);font-size:1.05rem;margin-bottom:12px;}
+  .cred-card ul{list-style:none;margin-bottom:22px;}
+  .cred-card ul:last-child{margin-bottom:0;}
+  .cred-card li{padding:7px 0 7px 26px;position:relative;font-size:.93rem;border-bottom:1px solid #e3e7e9;}
+  .cred-card li:last-child{border-bottom:none;}
+  .cred-card li::before{content:"—";position:absolute;left:2px;color:var(--teal);font-weight:700;}
+
+  /* 主治項目 accordions grid */
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+  details.svc{background:transparent;border-radius:0;box-shadow:none;overflow:hidden;border-top:1px solid #cfd8dc;border-bottom:1px solid #cfd8dc;}
+  details.svc summary{list-style:none;cursor:pointer;padding:18px 4px;display:flex;justify-content:space-between;align-items:center;gap:10px;transition:background .2s ease;}
+  details.svc summary:hover{background:rgba(11,111,115,.04);}
+  details.svc summary::-webkit-details-marker{display:none;}
+  details.svc summary .t b{display:block;font-weight:700;color:var(--navy);font-size:1.08rem;}
+  details.svc summary .t span{display:block;font-size:.82rem;color:var(--teal-dark);margin-top:2px;}
+  details.svc summary::after{content:"＋";color:var(--teal);font-size:1.3rem;flex-shrink:0;}
+  details.svc[open] summary::after{content:"－";}
+  details.svc .body{padding:0 4px 22px;font-size:.92rem;}
+  details.svc .hook{color:var(--navy);font-weight:700;font-size:.98rem;margin-bottom:8px;}
+  details.svc .body p{margin-bottom:8px;}
+  details.svc .body h4{color:var(--navy);font-size:.94rem;margin:14px 0 4px;}
+  details.svc ul{list-style:none;margin:4px 0 8px;}
+  details.svc li{padding:4px 0 4px 22px;position:relative;border-bottom:1px solid #e7eaec;}
+  details.svc li:last-child{border-bottom:none;}
+  details.svc li::before{content:"—";position:absolute;left:2px;color:var(--teal);font-weight:700;}
+  .warn{background:#fff3f0;border:1px solid #f3c1b4;color:#a4402a;border-radius:10px;padding:10px 14px;font-size:.85rem;margin:8px 0;}
+  .close-line{color:var(--teal-dark);font-weight:700;text-align:center;margin-top:12px;font-size:.95rem;}
+
+  /* 專業治療 */
+  .tx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 36px;border-top:1px solid #cfd8dc;}
+  .tx{display:block;color:inherit;background:transparent;border-radius:0;box-shadow:none;padding:28px 0;transition:background .2s ease;border-bottom:1px solid #cfd8dc;}
+  .tx:hover{background:rgba(11,111,115,.035);}
+  .tx h3{font-family:"Noto Serif TC",serif;color:var(--navy);font-size:1.35rem;margin-bottom:6px;line-height:1.45;letter-spacing:.01em;}
+  .tx .vp{color:var(--teal-dark);font-size:1rem;font-weight:700;margin-bottom:10px;}
+  .tx p{font-size:.92rem;color:var(--muted);}
+  .tx .more{display:inline-block;margin-top:12px;font-weight:700;color:var(--teal-dark);font-size:.92rem;}
+
+  /* 治療故事 */
+  .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .story{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:.25s;}
+  .story:hover{transform:translateY(-5px);}
+  .story .thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:#fff;}
+  .story:nth-child(1) .thumb{background:linear-gradient(135deg,#16497f,#3fc1c9);}
+  .story:nth-child(2) .thumb{background:linear-gradient(135deg,#0e6b6b,#61c0bf);}
+  .story:nth-child(3) .thumb{background:linear-gradient(135deg,#8c6c1d,#d3b256);}
+  .story .body{padding:20px 22px;}
+  .story h3{font-size:1.02rem;color:var(--navy);margin-bottom:6px;}
+  .story p{font-size:.86rem;color:var(--muted);}
+  .story .soon{display:inline-block;margin-top:10px;font-size:.75rem;color:var(--gold);font-weight:700;letter-spacing:.1em;}
+
+  /* Clinics */
+  .clinic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:820px;margin:0 auto;}
+  .clinic{background:var(--card);border:1px solid #dde3e5;border-radius:10px;box-shadow:none;padding:26px;display:flex;flex-direction:column;}
+  .clinic h3{color:var(--navy);font-size:1.08rem;margin-bottom:4px;}
+  .clinic .role{font-size:.8rem;color:var(--teal-dark);font-weight:700;margin-bottom:12px;}
+  .clinic dl{font-size:.88rem;flex:1;}
+  .clinic dt{font-weight:700;color:var(--navy);margin-top:10px;}
+  .clinic dd{color:var(--muted);margin-left:0;}
+  .clinic .btn{margin-top:18px;text-align:center;background:var(--gold);color:var(--navy-dark);font-size:.92rem;padding:11px 0;}
+  .clinic .btn:hover{filter:brightness(.96);}
+  .note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:18px;}
+  .emergency{max-width:720px;margin:16px auto 0;background:#fff3f0;border:1px solid #f3c1b4;color:#a4402a;border-radius:12px;padding:12px 20px;font-size:.86rem;text-align:center;}
+
+  /* CTA band */
+  .cta-band{background:var(--navy);color:#fff;text-align:center;padding:56px 20px;}
+  .cta-band h2{font-family:"Noto Serif TC",serif;font-size:1.6rem;letter-spacing:.02em;margin-bottom:10px;}
+  .cta-band p{color:#e3f6f6;margin-bottom:24px;}
+
+  footer{background:var(--navy-dark);color:#9db4c8;font-size:.85rem;padding:40px 0 24px;}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px;margin-bottom:26px;}
+  footer h4{color:#fff;font-size:.95rem;margin-bottom:10px;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:6px;}
+  footer a{color:#9db4c8;}
+  footer a:hover{color:#fff;}
+  .copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;font-size:.78rem;}
+  .disclaimer{font-size:.74rem;color:#6f8296;margin-top:8px;}
+
+  .float-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--gold);color:var(--navy-dark);text-align:center;padding:14px;font-weight:700;box-shadow:0 -4px 16px rgba(0,0,0,.15);}
+
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;padding:44px 0 52px;}
+    .portrait{max-width:340px;margin:0 auto;}
+    .hero h1{font-size:2rem;}
+    .about-grid{grid-template-columns:1fr;}
+    .svc-grid{grid-template-columns:1fr;}
+    .tx-grid,.story-grid,.clinic-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    nav > ul{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 16px 18px;box-shadow:0 10px 20px rgba(0,0,0,.1);max-height:calc(100vh - 64px);overflow-y:auto;}
+    nav > ul.open{display:flex;}
+    .sub{position:static;display:none;min-width:0;border-radius:10px;margin:2px 0 8px;}
+    nav li.has-sub.open > .sub{display:block;}
+    .menu-btn{display:block;}
+    .float-cta{display:block;}
+    body{padding-bottom:52px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 頂部資訊列 -->
+<div class="topbar">
+  <div class="container">
+    <span>國軍桃園總醫院 神經外科｜臺北榮民總醫院桃園分院 腦神經脊椎外科</span>
+    <span>掛號專線：(03)479-9595（國軍桃園總醫院）</span>
+  </div>
+</div>
+
+<!-- 導覽列 -->
+<header>
+  <div class="container nav">
+    <div class="brand"><b>文宏裕 醫師</b><span>脊椎神經外科</span></div>
+    <button class="menu-btn" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#about">文宏裕醫師</a></li>
+        <li class="has-sub"><a href="#services">主治項目</a>
+          <ul class="sub">
+            <li><a href="pages/svc-fracture.html">脊椎壓迫性骨折｜骨水泥手術</a></li>
+            <li><a href="pages/svc-stenosis.html">腰椎椎管狹窄｜走路走不遠、腳麻</a></li>
+            <li><a href="pages/svc-hivd.html">椎間盤突出與骨刺｜坐骨神經痛</a></li>
+            <li><a href="pages/svc-slip.html">腰椎滑脫｜脊椎不穩與神經壓迫</a></li>
+            <li><a href="pages/svc-cervical.html">頸椎神經壓迫｜手麻、肩頸痛</a></li>
+            <li><a href="pages/svc-carpal.html">腕隧道症候群｜手麻、夜間麻醒</a></li>
+            <li><a href="pages/svc-osteo.html">骨質疏鬆與脊椎骨折風險</a></li>
+            <li><a href="pages/svc-trauma.html">脊椎外傷｜跌倒、車禍後腰背痛</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="#treatments">治療方式</a>
+          <ul class="sub">
+            <li><a href="pages/tx-lumbar.html">微創腰椎手術</a></li>
+            <li><a href="pages/tx-cervical.html">微創頸椎手術</a></li>
+            <li><a href="pages/tx-cement.html">骨水泥手術</a></li>
+            <li><a href="pages/tx-block.html">神經阻斷及疼痛介入治療</a></li>
+            <li><a href="pages/tx-carpal.html">微創腕隧道神經鬆解術</a></li>
+            <li><a href="pages/tx-osteo.html">骨質疏鬆與骨折風險治療</a></li>
+          </ul>
+        </li>
+        <li><a href="#clinics" class="nav-cta">預約諮詢</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero" id="home">
+  <div class="container hero-inner">
+    <div>
+      <div class="positioning">脊椎微創手術・神經減壓・術後恢復</div>
+      <h1>把時間留給生活，<br>不留給疼痛。</h1>
+      <div class="slogan">「不該開的刀，我不開；該開的刀，我做到最好。」</div>
+      <p class="lead">好的脊椎治療，不只是解除疼痛，而是幫助病人重新走回生活。該保守治療時，我陪您努力；該手術時，我陪您安心。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#clinics">預約門診</a>
+        <a class="btn-link" href="#about">認識文醫師 →</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="frame">
+        <img src="dr-wen-photo.jpg" alt="文宏裕醫師 專業形象照" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div style=&quot;text-align:center;color:#5a7a96;padding:20px;font-size:.9rem&quot;>請將形象照存為<br><b>dr-wen-photo.jpg</b><br>放在本檔案同一資料夾</div>')">
+      </div>
+      <div class="caption">文宏裕醫師｜Hung Yu Wen, M.D.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 文宏裕醫師 -->
+<section id="about">
+  <div class="container">
+    <div class="sec-head">
+      <div class="en">關於文醫師</div>
+      <h2>文宏裕醫師</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <blockquote>「我不是最愛開刀的神經外科醫師，而是最重視正確判斷的脊椎神經外科醫師。不是每個人都需要手術；但真正需要手術的人，也不該錯過最適當的治療時機。」</blockquote>
+        <p>許多患者在來到門診之前，已經歷經吃藥、復健、注射或其他治療方式，卻仍然被疼痛、麻木、無力或行走困難所困擾；也有許多人在「到底要不要開刀」之間感到焦慮與不安。</p>
+        <p>對我來說，醫師的責任不是急著安排手術，而是協助病人釐清：<b>現在是否真的到了需要手術的時機。</b>如果可以透過保守治療改善，我會陪您一起努力；如果神經壓迫、脊椎退化或結構問題已經明顯影響生活，而手術可能帶來實質幫助，我也會以謹慎、精準的方式，陪您面對治療。</p>
+        <h3>我的治療理念｜精準判斷，謹慎治療</h3>
+        <p>脊椎治療的重點，不只是影像上看到什麼問題，而是要把病人的症狀、身體狀況、生活需求與影像檢查放在一起判斷。我的目標不是讓每位病人都接受手術，而是幫助每位病人找到最適合自己的治療選擇。</p>
+        <h3>手術不是目的，回到生活才是目的</h3>
+        <p>好的治療，不只是解除疼痛，而是讓病人能重新走路、重新活動、重新陪伴家人，也重新回到自己想要的日常。治療脊椎，不只是修復神經或改善結構問題，更是幫助病人重新走回生活。</p>
+        <p><b>讓每一次脊椎手術，都建立在真正需要的基礎上。</b></p>
+      </div>
+      <div class="cred-card">
+        <h3>經歷</h3>
+        <ul>
+          <li>國軍桃園總醫院 神經外科主任／主治醫師</li>
+          <li>臺北榮民總醫院桃園分院 兼任主治醫師</li>
+          <li>國軍花蓮總醫院 兼任主治醫師</li>
+          <li>衛生福利部雙和醫院 住院醫師／總醫師／研究醫師</li>
+          <li>台北神經醫學中心 總醫師／研究醫師</li>
+        </ul>
+        <h3>學歷</h3>
+        <ul>
+          <li>國防醫學院 醫學系 學士</li>
+          <li>國立臺北科技大學 化學工程與生物科技系 博士候選人</li>
+        </ul>
+        <h3>專科證照與學會</h3>
+        <ul>
+          <li>台灣外科醫學會 專科醫師</li>
+          <li>台灣神經外科醫學會 專科醫師</li>
+          <li>台灣神經血管外科與介入治療學會 會員</li>
+          <li>台灣神經脊椎外科醫學會 會員</li>
+          <li>台灣脊椎微創醫學會 會員</li>
+          <li>台灣脊椎微創內視鏡學會 會員</li>
+          <li>美國腦神經外科醫學會 會員</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 主治項目 -->
+<section id="services" style="background:#eef2f1;">
+  <div class="container">
+    <div class="sec-head">
+      <div class="en">主治專長</div>
+      <h2>主治項目</h2>
+      <p>點開每個項目，看看您的症狀是不是這些常見問題。</p>
+    </div>
+    <div class="svc-grid">
+
+      <details class="svc" id="svc-fracture">
+        <summary><div class="t"><b>脊椎壓迫性骨折</b><span>骨水泥手術｜跌倒後翻身劇痛、無法下床</span></div></summary>
+        <div class="body">
+          <p class="hook">老人跌倒後翻身劇痛、無法下床？別讓一次骨折，變成長期臥床的開始。</p>
+          <p>脊椎壓迫性骨折常見於骨質疏鬆的患者。當骨頭變得脆弱時，即使只是輕微跌倒、彎腰、搬東西，甚至用力咳嗽，都可能造成脊椎椎體塌陷，引發明顯腰背疼痛。</p>
+          <h4>什麼症狀需要注意？</h4>
+          <ul>
+            <li>跌倒後腰痛或背痛明顯加劇</li>
+            <li>翻身、坐起、站立時特別疼痛</li>
+            <li>休息幾天後仍沒有改善</li>
+            <li>因疼痛無法下床，需要家人協助</li>
+            <li>身高變矮、駝背越來越明顯</li>
+          </ul>
+          <h4>一定要開刀嗎？</h4>
+          <p>不一定。有些壓迫性骨折可以先透過藥物、背架、休息、復健與骨質疏鬆治療慢慢改善。但如果疼痛嚴重到影響翻身、下床、行走，就應評估是否適合微創骨水泥、氣囊撐開或千斤頂椎體撐開手術。</p>
+          <div class="warn">如果已經出現腳無力、無法行走、大小便異常或會陰部麻木，可能代表神經受到壓迫，應儘快就醫，必要時直接到急診評估。</div>
+          <p class="close-line">手術不是目的，回到生活才是目的。</p>
+        </div>
+      </details>
+
+      <details class="svc" id="svc-stenosis">
+        <summary><div class="t"><b>腰椎椎管狹窄</b><span>走路走不遠、腳麻</span></div></summary>
+        <div class="body">
+          <p class="hook">走不到 100 公尺就想坐下休息？這可能不是腳力退化，而是腰椎神經被壓迫。</p>
+          <p>如果您的症狀是：<b>站著、走路會加重；坐下、蹲下或彎腰會改善</b>，就要小心可能是腰椎椎管狹窄。這也是為什麼有些人走路走不遠，卻可以騎腳踏車，或扶著購物車走比較久。</p>
+          <h4>什麼情況需要就醫評估？</h4>
+          <ul>
+            <li>走路距離越來越短，走一段路就需要坐下或蹲下</li>
+            <li>腳麻、腿痠、腿痛反覆出現</li>
+            <li>站久比坐著更不舒服</li>
+            <li>已經復健、吃藥或打針，但改善有限</li>
+            <li>原本願意出門，現在因為腳麻腳痠越來越不想走</li>
+          </ul>
+          <div class="warn">如果出現大小便困難、失禁，或會陰部麻木，可能代表神經受到嚴重壓迫，應立即就醫。</div>
+          <p class="close-line">把時間留給生活，不留給疼痛。</p>
+        </div>
+      </details>
+
+      <details class="svc" id="svc-hivd">
+        <summary><div class="t"><b>椎間盤突出與骨刺</b><span>坐骨神經痛</span></div></summary>
+        <div class="body">
+          <p class="hook">下背痛一路拉到屁股、大腿、小腿，甚至腳底？這可能不是單純拉傷，而是坐骨神經受到壓迫。</p>
+          <p>坐骨神經痛不是一個單一疾病，而是一種症狀。背後常見的原因，是椎間盤突出或骨刺壓迫到腰椎神經。真正重要的不是只看「哪裡痛」，而是要判斷：<b>是哪一條神經受到壓迫。</b></p>
+          <h4>什麼症狀需要特別注意？</h4>
+          <ul>
+            <li>疼痛從腰部延伸到臀部、大腿或小腿</li>
+            <li>單側腿部出現電擊般、抽痛或拉扯感</li>
+            <li>久坐、彎腰、咳嗽或打噴嚏時症狀加重</li>
+            <li>吃藥、復健後仍反覆發作</li>
+            <li>腿部無力、走路容易拖腳或踩空</li>
+          </ul>
+          <h4>一定要開刀嗎？</h4>
+          <p>不一定。有些患者可以先透過藥物、復健、姿勢調整，或神經阻斷、硬膜外注射等方式改善。如果神經壓迫明確、保守治療效果有限，再評估微創腰椎神經減壓手術。</p>
+          <p class="close-line">疼痛可以忍，但神經症狀不應該一直拖。</p>
+        </div>
+      </details>
+
+      <details class="svc" id="svc-slip">
+        <summary><div class="t"><b>腰椎滑脫</b><span>脊椎不穩與神經壓迫</span></div></summary>
+        <div class="body">
+          <p class="hook">站久腰痠、久坐站起來特別痛？這可能不是單純老化，而是脊椎已經「走位」了。</p>
+          <p>當其中一節腰椎因為退化、關節鬆動、椎間盤磨損或外傷往前或往後滑動，就稱為腰椎滑脫。可能造成兩種問題：<b>脊椎不穩</b>（反覆腰痠、站不久、腰使不上力）與<b>神經壓迫</b>（屁股痠、腳麻、腿痛、走不遠）。</p>
+          <h4>什麼症狀需要特別注意？</h4>
+          <ul>
+            <li>腰痠腰痛反覆發作，腰部使不上力、感覺空空的</li>
+            <li>久坐站起來時，腰特別酸痛或卡住</li>
+            <li>站久或走久後，腰像撐不住</li>
+            <li>後仰時腰痛更明顯</li>
+            <li>走一段路就需要坐下休息</li>
+          </ul>
+          <p class="close-line">手術不是目的，回到生活才是目的。</p>
+        </div>
+      </details>
+
+      <details class="svc" id="svc-cervical">
+        <summary><div class="t"><b>頸椎神經壓迫</b><span>手麻、肩頸痛</span></div></summary>
+        <div class="body">
+          <p class="hook">脖子僵硬、膏肓痛，一路麻到手指頭？小心是頸椎神經在發出求救訊號。</p>
+          <p>當頸椎因為長期低頭、姿勢不良、退化、椎間盤突出或骨刺增生，導致神經通道變窄時，除了脖子與肩膀痠痛外，也可能沿著神經出現手臂、手掌或手指的麻木與疼痛。</p>
+          <h4>什麼症狀需要特別注意？</h4>
+          <ul>
+            <li>疼痛從脖子延伸到肩膀、手臂或手指</li>
+            <li>手臂有電擊感、針刺感或抽痛</li>
+            <li>握力變差，拿東西容易掉</li>
+            <li>扣鈕扣、拿筷子、寫字變困難</li>
+            <li>常因手麻或肩頸劇痛影響睡眠</li>
+          </ul>
+          <div class="warn">如果出現雙手越來越不靈活、走路不穩、像踩在棉花上，或大小便控制異常，可能代表脊髓受到壓迫，應儘快就醫評估。</div>
+          <h4>一定要開刀嗎？</h4>
+          <p>不一定。若神經壓迫尚未造成明顯肌肉無力或脊髓損傷，可先透過藥物、復健、姿勢調整或注射治療改善。若需手術，常見方式包括頸椎微創融合手術與人工椎間盤置換手術。</p>
+          <p class="close-line">手麻不一定只是循環不好，別只是一直忍耐。</p>
+        </div>
+      </details>
+
+      <details class="svc" id="svc-carpal">
+        <summary><div class="t"><b>腕隧道症候群</b><span>手麻、夜間麻醒</span></div></summary>
+        <div class="body">
+          <p class="hook">半夜常被手麻醒，起來甩一甩才舒服？這可能不是循環不好，而是手腕的正中神經受到壓迫。</p>
+          <p>如果麻木主要集中在<b>大拇指、食指、中指，以及無名指靠近中指的一側，而小指通常不麻</b>，就要小心可能是腕隧道症候群。這一點可以幫助區分是腕隧道症候群，還是其他神經壓迫問題。</p>
+          <h4>常見情境</h4>
+          <ul>
+            <li>晚上睡到一半被手麻、針刺感麻醒，甩一甩才緩解</li>
+            <li>騎機車、拿手機、用滑鼠、做家事時手指發麻</li>
+            <li>拿碗盤、杯子突然抓不穩，東西容易滑落</li>
+          </ul>
+          <p>睡覺時手腕容易不自覺彎曲，腕隧道內壓力增加，所以夜間特別容易麻醒。</p>
+          <p class="close-line">把時間留給生活，不留給疼痛。</p>
+        </div>
+      </details>
+
+      <details class="svc" id="svc-osteo">
+        <summary><div class="t"><b>骨質疏鬆與脊椎骨折風險</b><span>身高變矮、駝背、輕微跌倒就骨折</span></div></summary>
+        <div class="body">
+          <p class="hook">骨頭正在悄悄變空，您卻毫無感覺？別等骨折了，才發現骨質疏鬆。</p>
+          <p>骨質疏鬆最可怕的地方，是它常常沒有明顯症狀。等到真的發生骨折，痛到無法翻身、起床、走路時，才發現骨頭早已變得像海綿一樣脆弱。一旦發生第一次脊椎骨折，未來再次骨折的風險也會升高。</p>
+          <h4>哪些人需要特別注意？</h4>
+          <ul>
+            <li>65 歲以上女性、70 歲以上男性、停經後女性</li>
+            <li>身高明顯變矮、駝背越來越明顯</li>
+            <li>曾經因輕微跌倒就骨折</li>
+            <li>父母曾有髖部或脊椎骨折病史</li>
+            <li>長期使用類固醇藥物</li>
+            <li>體重過輕、很少運動、很少曬太陽</li>
+          </ul>
+          <p class="close-line">與其等到骨折後才發現，不如提早知道自己的骨折風險。</p>
+        </div>
+      </details>
+
+      <details class="svc" id="svc-trauma">
+        <summary><div class="t"><b>脊椎外傷</b><span>跌倒、車禍後腰背痛</span></div></summary>
+        <div class="body">
+          <p class="hook">摔倒、車禍後腰背劇痛？小心可能不只是單純拉傷。</p>
+          <p>尤其是年長者、骨質疏鬆患者，或原本就有脊椎退化問題的人，即使只是一次跌倒，也可能造成比想像中更嚴重的脊椎傷害。跌倒或車禍後的腰背痛，不能只用「有沒有瘀青」來判斷嚴重程度。</p>
+          <h4>什麼症狀需要儘快就醫？</h4>
+          <ul>
+            <li>腰背劇烈疼痛，稍微翻身、起床就痛到無法忍受</li>
+            <li>疼痛持續加劇，休息後仍沒有改善</li>
+            <li>腳麻、腳痛、電擊感或針刺感</li>
+            <li>下肢無力，踩地使不上力、走路不穩</li>
+          </ul>
+          <div class="warn">外傷後出現腳麻、腳無力、走路困難、大小便異常等神經學症狀，不要等待門診預約，應該<b>立刻到急診就醫</b>。急性神經受傷需要搶時間。外傷後疼痛明顯時，也不建議貿然推拿、整脊。</div>
+          <p class="close-line">治療不是只看影像，而是幫您安全地回到生活。</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- 專業治療 -->
+<section id="treatments">
+  <div class="container">
+    <div class="sec-head">
+      <div class="en">治療方式</div>
+      <h2>治療方式</h2>
+      <p>從精準注射到微創手術，選擇最適合您的治療方式，而不是最大的手術。</p>
+    </div>
+    <div class="tx-grid">
+      <a class="tx" id="tx-lumbar" href="pages/tx-lumbar.html">
+        <h3>微創腰椎手術</h3>
+        <div class="vp">內視鏡／顯微減壓與固定融合</div>
+        <p>透過微創切口，精準解除神經壓迫；必要時重建脊椎穩定。不是每一位患者都需要固定融合——重要的是判斷：只需要減壓，還是需要同時重建穩定度？</p>
+        <span class="more">了解更多 →</span>
+      </a>
+      <a class="tx" id="tx-cervical" href="pages/tx-cervical.html">
+        <h3>微創頸椎手術</h3>
+        <div class="vp">人工椎間盤置換與微創融合</div>
+        <p>經由脖子前側自然皮膚皺摺小切口，處理壓迫神經的椎間盤與骨刺，保留頸椎自然活動度，擺脫手麻與肩頸劇痛。</p>
+        <span class="more">了解更多 →</span>
+      </a>
+      <a class="tx" id="tx-cement" href="pages/tx-cement.html">
+        <h3>骨水泥手術</h3>
+        <div class="vp">椎體成形術與椎體撐開術</div>
+        <p>透過針孔大小的微創傷口穩定骨折椎體，幫助長輩減少疼痛、重新站起來。多數不需全身麻醉，單節手術約半小時左右。</p>
+        <span class="more">了解更多 →</span>
+      </a>
+      <a class="tx" id="tx-block" href="pages/tx-block.html">
+        <h3>神經阻斷及疼痛介入治療</h3>
+        <div class="vp">精準注射與疼痛控制</div>
+        <p>透過 X 光或超音波影像導引，將藥物精準送到疼痛來源——不是單純「打一針止痛」，同時協助判斷真正造成疼痛的位置。非手術的微創治療選擇。</p>
+        <span class="more">了解更多 →</span>
+      </a>
+      <a class="tx" id="tx-carpal" href="pages/tx-carpal.html">
+        <h3>微創腕隧道神經鬆解術</h3>
+        <div class="vp">正中神經減壓治療</div>
+        <p>透過微創切口，鬆開壓迫正中神經的橫腕韌帶，改善夜間手麻、手指刺痛與手部無力。</p>
+        <span class="more">了解更多 →</span>
+      </a>
+      <a class="tx" id="tx-osteo" href="pages/tx-osteo.html">
+        <h3>骨質疏鬆與骨折風險治療</h3>
+        <div class="vp">骨密度管理與藥物治療</div>
+        <p>手術處理眼前的骨折，骨鬆治療保護未來的骨頭。治標也要治本，才能真正降低再次骨折與臥床風險。</p>
+        <span class="more">了解更多 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 預約諮詢 -->
+<section id="clinics">
+  <div class="container">
+    <div class="sec-head">
+      <div class="en">門診資訊</div>
+      <h2>預約諮詢</h2>
+    </div>
+    <div class="clinic-grid">
+      <div class="clinic">
+        <h3>國軍桃園總醫院</h3>
+        <div class="role">神經外科主任／主治醫師</div>
+        <dl>
+          <dt>地址</dt><dd>桃園市龍潭區中興路168號</dd>
+          <dt>掛號專線</dt><dd>(03)479-9595・(03)262-3301</dd>
+          <dt>門診時段</dt><dd>請以院方最新門診表為準</dd>
+        </dl>
+        <a class="btn" href="https://registration.aftygh.gov.tw/webreg/calendar_dr/9EbMSUG4jjlRDZttm6M-Fg%3D%3D" target="_blank" rel="noopener">線上掛號 ↗</a>
+      </div>
+      <div class="clinic">
+        <h3>臺北榮民總醫院桃園分院</h3>
+        <div class="role">腦神經脊椎外科 兼任主治醫師</div>
+        <dl>
+          <dt>地址</dt><dd>桃園市桃園區成功路3段100號</dd>
+          <dt>代表電話</dt><dd>(03)286-8001</dd>
+          <dt>門診時段</dt><dd>週三上午 9:00–12:00・週六（依當月公告）</dd>
+        </dl>
+        <a class="btn" href="https://webreg.tyvh.gov.tw/" target="_blank" rel="noopener">線上掛號 ↗</a>
+      </div>
+    </div>
+    <p class="note">＊實際看診時段以各院當月公告為準。</p>
+    <div class="emergency">外傷後出現腳麻無力、大小便異常，或突發臉歪、手垂、大舌頭等中風症狀，請立即撥打 119。</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>在「到底要不要開刀」之間猶豫嗎？</h2>
+  <p>讓我協助您精準判斷：現在是否真的到了需要手術的時機。<br>該保守治療時，我陪您努力；該手術時，我陪您安心。</p>
+  <a class="btn btn-primary" href="#clinics">預約門診諮詢</a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>文宏裕醫師｜神經外科・脊椎退化疾病・微創脊椎手術</h4>
+        <p>不該開的刀，我不開；該開的刀，我做到最好。<br>手術不是目的，回到生活才是目的。</p>
+      </div>
+      <div>
+        <h4>快速連結</h4>
+        <ul>
+          <li><a href="#about">文宏裕醫師</a></li>
+          <li><a href="#services">主治項目</a></li>
+          <li><a href="#treatments">治療方式</a></li>
+          <li><a href="#clinics">預約諮詢</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>掛號資訊</h4>
+        <ul>
+          <li>國軍桃園總醫院 (03)479-9595</li>
+          <li>北榮桃園分院 (03)286-8001</li>
+          <li><a href="https://registration.aftygh.gov.tw" target="_blank" rel="noopener">國軍桃園總醫院線上掛號</a></li>
+          <li><a href="https://webreg.tyvh.gov.tw/" target="_blank" rel="noopener">北榮桃園分院線上掛號</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 文宏裕醫師. All Rights Reserved.
+      <div class="disclaimer">本網站內容僅供衛教參考，不能取代醫師當面診斷；實際治療方式請與醫師討論。網站內容遵循醫療法及醫療廣告相關規範。</div>
+    </div>
+  </div>
+</footer>
+
+<a class="float-cta" href="#clinics">預約門診</a>
+
+<script>
+(function(){
+  var header = document.querySelector('header');
+
+  // 點下拉選單連結：若目標是折疊卡(details)則自動展開，並補償置頂導覽列高度捲動
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if(!target) return;
+      e.preventDefault();
+      // 收合手機版選單
+      document.getElementById('menu').classList.remove('open');
+      document.querySelectorAll('nav li.has-sub.open').forEach(function(li){li.classList.remove('open');});
+      // 若是 details 折疊卡，自動展開
+      if(target.tagName === 'DETAILS') target.open = true;
+      var y = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight - 12;
+      window.scrollTo({top: y, behavior: 'smooth'});
+      history.replaceState(null, '', '#' + id);
+    });
+  });
+
+  // 手機版：點「主治項目/專業治療/治療故事」先展開子選單，再點一次才前往該區
+  function isMobile(){ return window.matchMedia('(max-width:900px)').matches; }
+  document.querySelectorAll('nav li.has-sub > a').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if(!isMobile()) return; // 桌機用 hover，不攔截
+      var li = this.parentElement;
+      if(!li.classList.contains('open')){
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelectorAll('nav li.has-sub.open').forEach(function(o){ if(o!==li) o.classList.remove('open'); });
+        li.classList.add('open');
+      }
+    }, true);
+  });
+
+  // 直接以 #hash 開啟頁面時，也自動展開對應折疊卡
+  if(location.hash){
+    var t = document.getElementById(location.hash.slice(1));
+    if(t && t.tagName === 'DETAILS') t.open = true;
+  }
+
+  // 每張主治項目折疊卡底部加上「閱讀完整介紹」連結（連到子頁面）
+  document.querySelectorAll('details[id^="svc-"] .body').forEach(function(b){
+    var id = b.closest('details').id;
+    var a = document.createElement('a');
+    a.href = 'pages/' + id + '.html';
+    a.textContent = '閱讀完整介紹（含圖解） →';
+    a.style.cssText = 'display:block;text-align:center;margin-top:10px;font-weight:700;color:var(--teal-dark);';
+    b.appendChild(a);
+  });
+})();
+</script>
+
+</body>
+</html>
