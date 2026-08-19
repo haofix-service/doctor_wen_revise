@@ -1,1 +1,14 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    if (window.innerWidth <= 768) {
+      window.location.replace("./dr-wen-mobile-optimized.html");
+    } else {
+      window.location.replace("./dr-wen-desktop-optimized.html");
+    }
+  </script>
+</head>
+<body></body>
+</html>
